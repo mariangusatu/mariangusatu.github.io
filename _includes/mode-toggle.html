@@ -20,45 +20,14 @@
 
     constructor() {
       if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
+        if (this.isLightMode) {
+          this.setLight();
         } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
+          this.clearMode();
         }
+      } else {
+        this.clearMode();
       }
-
-      let self = this;
-
-      /* always follow the system prefers */
-      this.sysDarkPrefers.addEventListener("change", () => {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setLight();
-            }
-          }
-
-          self.clearMode();
-        }
-
-        self.notify();
-      });
-    } /* constructor() */
-
-    get sysDarkPrefers() {
-      return window.matchMedia("(prefers-color-scheme: dark)");
-    }
-
-    get isSysDarkPrefer() {
-      return this.sysDarkPrefers.matches;
     }
 
     get isDarkMode() {
@@ -79,10 +48,10 @@
 
     /* get the current mode on screen */
     get modeStatus() {
-      if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) {
-        return ModeToggle.DARK_MODE;
-      } else {
+      if (this.isLightMode) {
         return ModeToggle.LIGHT_MODE;
+      } else {
+        return ModeToggle.DARK_MODE;
       }
     }
 
@@ -103,7 +72,7 @@
     }
 
     clearMode() {
-      document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
+      this.setDark();
       sessionStorage.removeItem(ModeToggle.MODE_KEY);
     }
 
@@ -120,25 +89,13 @@
 
     flipMode() {
       if (this.hasMode) {
-        if (this.isSysDarkPrefer) {
-          if (this.isLightMode) {
-            this.clearMode();
-          } else {
-            this.setLight();
-          }
+        if (this.isLightMode) {
+          this.clearMode();
         } else {
-          if (this.isDarkMode) {
-            this.clearMode();
-          } else {
-            this.setDark();
-          }
+          this.setLight();
         }
       } else {
-        if (this.isSysDarkPrefer) {
-          this.setLight();
-        } else {
-          this.setDark();
-        }
+        this.setLight();
       }
 
       this.notify();
