@@ -720,7 +720,7 @@ $btn-mb: 0.5rem;
     height: 7rem;
     overflow: hidden;
     box-shadow: var(--avatar-border-color) 0 0 0 2px;
-    margin-left: 35px;
+    margin-left: 2.2rem; // <=> 35px; 
     transform: translateZ(0); /* fixed the zoom in Safari */
   }
 
