@@ -716,9 +716,11 @@ $btn-mb: 0.5rem;
 
   #avatar {
     display: block;
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 7rem;
+    height: 7rem;
     overflow: hidden;
+    box-shadow: var(--avatar-border-color) 0 0 0 2px;
+    margin-left: 35px;
     transform: translateZ(0); /* fixed the zoom in Safari */
   }
 
@@ -737,7 +739,7 @@ $btn-mb: 0.5rem;
     line-height: 1.2;
     letter-spacing: 0.25px;
     color: rgba(134, 133, 133, 0.99);
-    margin-top: 1.25rem;
+    margin-top: 1.75rem;
     margin-bottom: 0.5rem;
 
     a {
