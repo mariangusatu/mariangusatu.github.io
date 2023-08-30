@@ -179,9 +179,16 @@ footer {
   div.d-flex {
     height: $footer-height;
     line-height: 1.2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     border-top: 1px solid var(--main-border-color);
     flex-wrap: wrap;
+  }
+
+  div.disclaimer {
+    text-align: center;
+    width: 100%;
+    margin-top:0.9rem;
+    margin-bottom: 0.25rem;
   }
 
   a {
@@ -741,7 +748,7 @@ $btn-mb: 0.5rem;
     color: rgba(134, 133, 133, 0.99);
     // margin-top: 1.75rem;
     // margin-bottom: 0.5rem;
-    margin-top: 3.5rem;
+    margin-top: 3.35rem;
     margin-bottom: 1rem;
 
     a {
@@ -1268,6 +1275,10 @@ $btn-mb: 0.5rem;
       padding: 1.5rem 0;
       line-height: 1.65;
       flex-wrap: wrap;
+    }
+
+    div.disclaimer {
+      margin-top:0.7rem;
     }
   }
 
