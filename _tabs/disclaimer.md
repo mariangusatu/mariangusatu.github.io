@@ -37,8 +37,6 @@ However, you can explore the information presented on this Blog on your own comp
 
 This Website may contain links to third-party websites or content. These links are provided for your convenience and as additional resources. We have no control over the content or practices of third-party websites and do not endorse or assume responsibility for any content found on these external sites.
 
-By using this Website, you agree to and accept this disclaimer in full.
-
 <h2 data-toc-skip>Update and Contact</h2>
 
 We may update this disclaimer from time to time to reflect changes in our content and practices.
@@ -46,3 +44,5 @@ We may update this disclaimer from time to time to reflect changes in our conten
 <h2 data-toc-skip>Effective Date</h2>
 
 This disclaimer was last updated on 30 August 2023.
+
+By using this Website, you agree to and accept this disclaimer in full.
