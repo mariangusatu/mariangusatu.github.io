@@ -23,8 +23,7 @@ title: Marian Gusatu # the main title
 tagline: Threat & Vulnerability Researcher, Penetration Tester # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
-
+  This blog is a collection of my personal discoveries and lessons, crafted during my free time, and shared with other cybersecurity enthusiasts. Discover cybersecurity tips, pentesting techniques, reverse engineering tutorials and more of the ever-evolving field of cybersecurity.
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://mariangusatu.github.io"
 
